@@ -28,10 +28,19 @@ class App extends Component {
         title: 'Black Clover',
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJew8w8P82vQy4Kn6D2arqxHPhI0jsasOx2w&usqp=CAU',
         details: '4 saisons | en cours | Shōnen',
-        description: ''
+        description: "Yuno et Asta sont deux jeunes héros qui partagent le même rêve : celui de devenir le prochain Empereur-Mage du royaume de Clover, grâce à la puissance et l'omniprésence de la magie. Meilleurs amis et élevés côte à côte depuis leur plus tendre enfance, nos deux héros sont pourtant radicalement différents."
       }],
       selectedAnime:0
     }
+  }
+
+  updateSelectedAnime = (title) => {
+    const index = this.state.animes.findIndex( (a) => {
+      return title === a.title;
+    })
+    this.setState({
+      selectedAnime: index
+    })
   }
 
   render () {
@@ -39,7 +48,7 @@ class App extends Component {
       <div className="App d-flex flex-column">
         <Header />
         <div className= "d-flex flex-row flex-fill pt-4 p-2">
-          <MovieList />
+          <MovieList anime={ this.state.animes } updateSelectedAnime= { this.updateSelectedAnime }/>
           <MovieDetails anime={ this.state.animes[this.state.selectedAnime] }/>
         </div>
       </div>
