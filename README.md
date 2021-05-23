@@ -1,4 +1,4 @@
-# movie-project-react
+# AlloAnime
 
 ## Projet fait en React: 
 
