@@ -1,6 +1,4 @@
 import { Component } from 'react';
-import './App.css';
-
 import { Header, MovieDetails, MovieList }  from './components/';
 
 class App extends Component {
@@ -8,9 +6,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      anime: [{
+      animes: [{
         title: 'One Piece',
-        img: 'https://photos.tf1.fr/700/933/vignette-portrait-one-piece-4539bb-29604b-0@1x.webp" className="card-img-top',
+        img: 'https://photos.tf1.fr/700/933/vignette-portrait-one-piece-4539bb-29604b-0@1x.webp',
         details: '20 saisons | en cours | shōnen',
         description: "Luffy, un jeune garçon, rêve de devenir le Roi des Pirates en trouvant le One Piece, le trésor ultime rassemblé par Gol D. Roger, le seul pirate à avoir jamais porté le titre de Roi des Pirates. ... Pour échapper à la noyade, il s'enferme dans un tonneau et se fait repêcher par un jeune garçon du nom de Kobby."
       },
@@ -31,8 +29,7 @@ class App extends Component {
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJew8w8P82vQy4Kn6D2arqxHPhI0jsasOx2w&usqp=CAU',
         details: '4 saisons | en cours | Shōnen',
         description: ''
-      },
-    ],
+      }],
       selectedAnime:0
     }
   }
@@ -43,7 +40,7 @@ class App extends Component {
         <Header />
         <div className= "d-flex flex-row flex-fill pt-4 p-2">
           <MovieList />
-          <MovieDetails />
+          <MovieDetails anime={ this.state.animes[this.state.selectedAnime] }/>
         </div>
       </div>
     );
