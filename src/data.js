@@ -12,7 +12,7 @@ export default [
       description: "La Grande Guerre des Titans commença alors pendant laquelle le peuple de Mahr utilisa les Titans afin de détruire le peuple Eldien. Le roi et sa famille fuirent vers l'île du Paradis où il utilisa le Titan Colossal pour construire trois murs autour de son territoire."
     },
     {
-      title: 'Kingdom',
+      title: 'Kingdom' ,
       img: 'https://www.manga-news.com/public/images/dvd/Kingdom-anime-saison-3-visual-1.jpg',
       details: '4 saisons | en cours | Seinen',
       description: "Dans la période de l'ancienne Chine, Shin et Hyou sont des orphelins de guerre dans le royaume de Qin. Ils rêvent un jour de pouvoir se rendre sur un champ de guerre. Un jour, Hyou est amené au palais par un ministre, pris par erreur pour le roi du royaume ennemi."
